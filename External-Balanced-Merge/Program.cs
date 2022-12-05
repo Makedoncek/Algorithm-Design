@@ -9,7 +9,7 @@ internal class Program
     private static string _path = string.Empty;
     private static IFileGenerator _generator = null!;
     private static ISorter _sorter = null!;
-    private const int linesCount = 256_000_000;
+    private const int linesCount = 56_000_000;
 
     public static void Main(string[] args)
     {
@@ -23,7 +23,7 @@ internal class Program
 
     static void Normal()
     {
-        _path = @"D:\ExternalBalancedMerge\Lab1\bin\Debug\net6.0\textFile.txt";
+        _path = @"D:\Algorithm-Design\External-Balanced-Merge\bin\Debug\net6.0\textFile.txt";
 
         _generator = new TextFileGenerator();
         _generator.GenerateBySize(_path, 10);
@@ -37,7 +37,7 @@ internal class Program
 
     static void Modified()
     {
-        _path = @"D:\ExternalBalancedMerge\Lab1\bin\Debug\net6.0\binFile.dat";
+        _path = @"D:\Algorithm-Design\External-Balanced-Merge\bin\Debug\net6.0\binFile.dat";
 
         _generator = new BinaryFileGenerator();
         _generator.GenerateByLinesCount(_path, linesCount);
